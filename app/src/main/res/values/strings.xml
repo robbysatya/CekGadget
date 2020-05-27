@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Cek Gadget</string>
+    <string name="gadget_name">Nama Gedget</string>
+    <string name="detail">Deskripsi product</string>
+</resources>
