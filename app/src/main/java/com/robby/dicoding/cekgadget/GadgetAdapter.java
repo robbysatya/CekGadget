@@ -1,18 +1,18 @@
-package com.robby.dicoding.cekgadget;
+        package com.robby.dicoding.cekgadget;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
+        import android.widget.ImageView;
+        import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+        import androidx.annotation.NonNull;
+        import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
+        import com.bumptech.glide.Glide;
+        import com.bumptech.glide.request.RequestOptions;
 
-import java.util.ArrayList;
+        import java.util.ArrayList;
 
 public class GadgetAdapter extends RecyclerView.Adapter<GadgetAdapter.ListViewHolder> {
     private ArrayList<Gadget> list_gadget;
@@ -40,12 +40,7 @@ public class GadgetAdapter extends RecyclerView.Adapter<GadgetAdapter.ListViewHo
         holder.text_judul.setText(gadget.getName());
         holder.text_detail.setText(gadget.getDetail());
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                itemClickCallBack.itemClicked(list_gadget.get(holder.getAdapterPosition()));
-            }
-        });
+        holder.itemView.setOnClickListener(view -> itemClickCallBack.itemClicked(list_gadget.get(holder.getAdapterPosition())));
     }
 
     public interface ItemClickCallBack {
